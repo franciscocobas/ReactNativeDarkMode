@@ -29,7 +29,7 @@ Add the packages running the following command in your terminal:
 
 `npm install redux react-redux`
 
-### 2 - React Navigation
+### 3 - React Navigation
 
 React Navigation is a library that holds Routing and navigation for your React Native(RN) app. This library is being used by many developers lately. And personally I think is robust and a great choice to hold Routing and navigation in RN. Also it's a great choice if we want to have a **default theme in your app and apply to all screens**. 
 
@@ -43,13 +43,19 @@ According to the offical documentation, to install React Navigation we need to r
 
 4. **Basic Stack navigation:** `npm install @react-navigation/stack`
 
-### 3 - Appearance configuration on Android
+### 4 - Appearance configuration on Android
 
 | ⚠️Note  |
 | ----- |
-| We are going to use the React Native Appearance module. And this module was introduced in version v0.62. If you have a React Native version less than 0.62 I recommend you to use the [react-native-appearance](https://github.com/expo/react-native-appearance) package. There is no much more difference between both versions. |
+|React Native Appearance module has a known bug (Please check [#28823](https://github.com/facebook/react-native/issues/28823)) that cause change theme listener not working. In order to fix this bug we need to install another package called [react-native-appearance](https://github.com/expo/react-native-appearance)|
 
-In order to have properly configured the Appearance module for React Native we should modify the `android/app/src/main/java/com/reactnativedarkmode/MainActivity.java` file.
+So we need to run the following commands: 
+
+`npm install react-native-appearance`
+
+`npx pod-install`
+
+Then, in order to have properly configured the Appearance module for React Native we should modify the `android/app/src/main/java/com/reactnativedarkmode/MainActivity.java` file.
 
 We need to add the following lines to the file: 
 
