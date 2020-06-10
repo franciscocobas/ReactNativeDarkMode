@@ -7,13 +7,17 @@
 - 📱 React Native https://reactnative.dev/ 
 - 🔖 Redux https://redux.js.org/
 - 🗺 React Navigation https://reactnavigation.org/
-- 🌛☀️ Appereance https://reactnative.dev/docs/appearance
+- 🌛☀️ Appearance https://reactnative.dev/docs/appearance
+
+|Note|
+|----|
+|You can check the source code in the following Github repo: https://github.com/franciscocobas/ReactNativeDarkMode|
 
 ## Let's start 🎬
 
 ### 1 - React Native Bare Project
 
-First, we need to set up the environment. We are going to create a React Native App and then install the require packages. 
+First, we need to set up the environment. We are going to create a React Native App and then install the required packages. 
 
 The app will be named ReactNativeDarkMode, but you can put whatever you want as a name.
 
@@ -23,7 +27,7 @@ In your prefered terminal run the following command:
 
 ### 2 - Redux and React-Redux
 
-Redux is a predictable state container for Javascript apps. Because Redux can be used with many frameworks and libraries that's why along with `redux` we need to install `react-redux`.
+Redux is a predictable state container for Javascript apps. Because Redux can be used with many frameworks and libraries, we need to install `react-redux` in addition to `redux`.
 
 Add the packages running the following command in your terminal:
 
@@ -31,9 +35,9 @@ Add the packages running the following command in your terminal:
 
 ### 3 - React Navigation
 
-React Navigation is a library that holds Routing and navigation for your React Native(RN) app. This library is being used by many developers lately. And personally I think is robust and a great choice to hold Routing and navigation in RN. Also it's a great choice if we want to have a **default theme in your app and apply to all screens**. 
+React Navigation is a library that holds Routing and navigation for your React Native(RN) app. This library is being used by many developers lately. And personally I think it is robust and a great choice to hold Routing and navigation in RN. It's also a great choice if you want to have a **default theme in your app and apply to all screens**. 
 
-According to the offical documentation, to install React Navigation we need to run  the following commands:
+According to the official documentation, to install React Navigation we need to run  the following commands:
 
 1. **React Navigation:** `npm install @react-navigation/native`
 
@@ -47,7 +51,7 @@ According to the offical documentation, to install React Navigation we need to r
 
 | ⚠️Note  |
 | ----- |
-|React Native Appearance module has a known bug (Please check [#28823](https://github.com/facebook/react-native/issues/28823)) that cause change theme listener not working. In order to fix this bug we need to install another package called [react-native-appearance](https://github.com/expo/react-native-appearance)|
+|React Native Appearance module has a known bug (Please check [#28823](https://github.com/facebook/react-native/issues/28823)) that cause the theme listener not to work. In order to fix this bug we need to install another package called [react-native-appearance](https://github.com/expo/react-native-appearance)|
 
 So we need to run the following commands: 
 
@@ -190,7 +194,7 @@ export default App;
 
 ##### 4 - It's time to add the Appearance module ⚡️ to our app. Let's do it
 
-The **Appearance** module has a event listener that listen when the user or the system (scheduled color scheme change at sunrise or sunset) change the preferred color scheme. So we are going to add that listener when the application first start in the App component. 
+The **Appearance** module has an event listener that listens when the user or the system (scheduled color scheme change at sunrise or sunset) change the preferred color scheme. So we are going to add that listener when the application first starts in the App component. 
 
 ⚠️ To be more clear let's move the `NavigatorContainerComponent` to another new file. Create a new file `src/NavigatorContainerComponent.js` 
 
@@ -261,7 +265,7 @@ export default App;
 
 ##### 5 - Add an action and save the theme to the redux store ☄️
 
-First we need to create a type that will be responsable for change the theme. In order to do that we need the create a new file `./src/types.js` and modify as following:
+First we need to create a type that will be responsible for changing the theme. In order to do that we need the create a new file `./src/types.js` and modify as following:
 
 ```javascript
 export const CHANGE_THEME = 'change_theme';
@@ -420,7 +424,7 @@ export default HomeScreen;
 
 | Note: |
 | ---- |
-| **DarkTheme** and **DefaultTheme** has many properties that may help to be consistent using colors.|
+| **DarkTheme** and **DefaultTheme** have many properties that may help to be consistent using colors.|
 
 
 - `dark` (`boolean`): Whether this is a dark theme or a light theme
